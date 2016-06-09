@@ -16,7 +16,7 @@
         angular.element($window).on('click', function (event) {
           if (element[0].contains(event.target)) return;
           clickOutHandler(scope, {$event: event});
-          scope.$apply();
+          scope.$evalAsync();
         });
       }
     };
